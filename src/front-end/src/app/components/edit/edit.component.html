@@ -1,13 +1,12 @@
-<a class="edit-button" (click)="setVisible()"><i class="material-icons">edit</i></a>
+<a class="btn edit-button" (click)="setVisible()"><i class="material-icons">assignment</i></a>
 <div *ngIf="visible == true" class="card card-container">
-    <div class="card-body">
-        <p>Description: {{description}} </p>
-        <p>Description: {{description}} </p>
-        <p>Satate: {{state}} </p>
-        <p>Comment: {{comment}} </p>
-        <p>User: {{user}} </p>
-        <div class="input-field col s12">
-            <a><i class="material-icons" (click)="close()">close</i></a>
-        </div>
+    <div class="input-field col s12">
+        <a><i class="material-icons" (click)="close()">close</i></a>
+    </div>
+    <div class="main-container card-body">
+        <h4>Task information</h4>
+        <p><span class="focus-text">Description: </span> {{description}} </p>
+        <p><span class="focus-text">State:</span> {{state}} </p>
+        <p><span class="focus-text">Comment:</span> {{comment != null || comment != ""  ? comment : 'Without comment'}} </p>    
     </div>
 </div>

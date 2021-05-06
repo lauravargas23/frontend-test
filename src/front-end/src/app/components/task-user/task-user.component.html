@@ -1,19 +1,19 @@
 <app-navbar></app-navbar>
 <div class="container" *ngIf="authorized == true">
+    <h1 class="text-title">User tasks list</h1>
     <div class="row mt-5">
         <div class="col-sm todo-card mx-3">
             <h2 class="title">To Do</h2>
             <div class="row" *ngFor="let task of toDoList; let i = index">
                 <div class="col s12 m5">
                     <div class="card-panel card">
-                        <h4>{{ task.description }}</h4>
-                        <h5>{{ task.percent }}%</h5>
-                        <p>{{ task.comment }}</p>
+                        <h5>{{ task.description }}</h5>
+                        <p>{{ task.percent }}%</p>
                         <div class="text-right">
-                            <a class="delete-button" (click)="showId(task)"><i class="material-icons">lock</i></a>
-                            <app-show-data></app-show-data>
+                            <a class="btn delete-button" (click)="showId(task)"><i class="material-icons">lock</i></a>
                             <app-edit [_id]="task._id" [percent]="task.percent" [description]="task.description"
-                                [user]="task.user" [state]="task.state" [comment]="task.comment"></app-edit>
+                                [user]="task.user" [state]="task.state" [comment]="task.comment ? task.comment : null">
+                            </app-edit>
                         </div>
                     </div>
                 </div>
@@ -24,12 +24,13 @@
             <div class="row" *ngFor="let task of doingList; let i = index">
                 <div class="col s12 m5">
                     <div class="card-panel card">
-                        <h4>{{ task.description }}</h4>
-                        <h5>{{ task.percent }}%</h5>
-                        <p>{{ task.comment }}</p>
+                        <h5>{{ task.description }}</h5>
+                        <p>{{ task.percent }}%</p>
                         <div class="text-right">
+                            <a class="btn delete-button" (click)="showId(task)"><i class="material-icons">lock</i></a>
                             <app-edit [_id]="task._id" [percent]="task.percent" [description]="task.description"
-                                [user]="task.user" [state]="task.state" [comment]="task.comment"></app-edit>
+                                [user]="task.user" [state]="task.state" [comment]="task.comment ? task.comment : null">
+                            </app-edit>
                         </div>
                     </div>
                 </div>
@@ -40,16 +41,22 @@
             <div class="row" *ngFor="let task of doneList; let i = index">
                 <div class="col s12 m5">
                     <div class="card-panel card">
-                        <h4>{{ task.description }}</h4>
-                        <h5>{{ task.percent }}%</h5>
-                        <p>{{ task.comment }}</p>
+                        <h5>{{ task.description }}</h5>
+                        <p>{{ task.percent }}%</p>
                         <div class="text-right">
+                            <a class="btn delete-button" (click)="showId(task)"><i class="material-icons">lock</i></a>
                             <app-edit [_id]="task._id" [percent]="task.percent" [description]="task.description"
-                                [user]="task.user" [state]="task.state" [comment]="task.comment"></app-edit>
+                                [user]="task.user" [state]="task.state" [comment]="task.comment ? task.comment : null">
+                            </app-edit>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <app-show-data></app-show-data>
         </div>
     </div>
 </div>

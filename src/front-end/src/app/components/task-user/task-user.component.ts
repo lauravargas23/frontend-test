@@ -62,7 +62,6 @@ export class TaskUserComponent implements OnInit {
   }
 
   showId(task: Task) {
-    console.log(this.visible);
     this.visible = true;
     this.taskService.showData.emit({
       newData: task

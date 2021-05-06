@@ -4,17 +4,20 @@
     margin-top: 15%;
 }
 
-.todo-card {
+.todo-card {    
+    margin-top: 5px;
     background-color: #fef668;
     border-radius: 7px;
 }
 
 .doing-card {
+    margin-top: 5px;
     background-color: #d996d8;
     border-radius: 7px;
 }
 
 .done-card {
+    margin-top: 5px;
     background-color: #abd46e;
     border-radius: 7px;
 }
@@ -34,6 +37,21 @@
 }
 
 .delete-button {
-    margin-right: -5px;
+    margin-right: -5px;    
+    margin-left: 5px;
     color: #a2a2a2;
+}
+
+.delete-button:hover {
+    background-color: white;
+}
+
+.text-title {
+    color: #540581;
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 30px;
+    text-align: center;
+    text-shadow: 0 5px 5px rgb(153, 153, 153);
 }

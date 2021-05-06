@@ -9,21 +9,24 @@ import { TaskService } from 'src/app/services/task.service';
 export class ShowDataComponent implements OnInit {
 
   alert: boolean;
-  msg: string;
+  idTask: string;
+  idUser: string;
 
   constructor(public taskService: TaskService) {
     this.alert = false;
-    this.msg = "";
+    this.idTask = "";
+    this.idUser = "";
   }
 
   ngOnInit(): void {
     this.taskService.showData.subscribe(data => {
-      this.showMsg(data.newData._id);
+      this.showMsg(data.newData._id, data.newData.user);
     });
   }
 
-  showMsg(msg: string) {
-    this.msg = msg;
+  showMsg(id: string, user: string) {
+    this.idTask = id;
+    this.idUser = user;
     this.alert = true;
     setTimeout(() => {
       this.alert = false;
