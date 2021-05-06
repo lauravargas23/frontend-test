@@ -9,12 +9,16 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  data: Login;
+  public data: Login;
+  public users: User[];
+  public selectedUser: User;
   public token: any;
   readonly URL_API = 'http://localhost:3000/api/users';
 
   constructor(private http: HttpClient) {
     this.data = new Login();
+    this.selectedUser = new User();
+    this.users = [];
     this.token = null;
   }
 
@@ -29,7 +33,7 @@ export class LoginService {
     this.token = null;
   }
 
-  getUsers(): Observable<User[]>{
+  getUsers(): Observable<User[]> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${localStorage.getItem('ACCESS_TOKEN')}`

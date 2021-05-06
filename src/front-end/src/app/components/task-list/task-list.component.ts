@@ -28,7 +28,6 @@ export class TaskListComponent implements OnInit {
     this.taskService.deleteTask(_id)
       .subscribe(res => {
         console.log(res);
-        //this.listTasks();
       }, (err) => {
         if(err.status == 200){
           this.listTasks();

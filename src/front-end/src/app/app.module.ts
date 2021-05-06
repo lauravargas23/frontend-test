@@ -14,6 +14,7 @@ import { UserComponent } from './components/user/user.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditComponent } from './components/edit/edit.component';
 import { ShowDataComponent } from './components/show-data/show-data.component';
+import { UserPipe } from './models/user-pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ShowDataComponent } from './components/show-data/show-data.component';
     UserComponent,
     EditComponent,
     ShowDataComponent,
+    UserPipe,
   ],
   imports: [
     BrowserModule,
