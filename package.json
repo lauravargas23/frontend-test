@@ -1,0 +1,34 @@
+{
+  "name": "frontend-test",
+  "version": "1.0.0",
+  "description": "Teleperformance front-end test",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/back-end/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauravargas23/frontend-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauravargas23/frontend-test/issues"
+  },
+  "homepage": "https://github.com/lauravargas23/frontend-test#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.7",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

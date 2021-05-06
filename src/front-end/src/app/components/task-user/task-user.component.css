@@ -1,0 +1,39 @@
+.no-authorized {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.todo-card {
+    background-color: #fef668;
+    border-radius: 7px;
+}
+
+.doing-card {
+    background-color: #d996d8;
+    border-radius: 7px;
+}
+
+.done-card {
+    background-color: #abd46e;
+    border-radius: 7px;
+}
+
+.card {
+    background-color: #cdcdcd;
+}
+
+.title {
+    color: #a152a7;
+    font-family: 'Signika', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0;
+    text-align: center;
+}
+
+.delete-button {
+    margin-right: -5px;
+    color: #a2a2a2;
+}

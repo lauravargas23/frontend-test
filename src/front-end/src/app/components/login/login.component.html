@@ -1,0 +1,28 @@
+<div id="bg-container" class="bg-container"></div>
+<div class="container">
+    <div class="card card-container">
+        <img class="card-img-top img-container" src="../../../assets/login.png" alt="Card image cap">
+        <div class="card-body">
+            <form #loginForm="ngForm" (ngSubmit)="loginAction(loginForm)">
+                <div class="input-field col s12">
+                    <input type="text" name="email" #email="ngModel" [(ngModel)]="loginService.data.email"
+                        placeholder="Email">
+                </div>
+                <div class="input-field col s12">
+                    <input type="password" name="password" #password="ngModel" [(ngModel)]="loginService.data.password"
+                        placeholder="Password">
+                </div>
+                <div class="card-action">
+                    <div class="input-field col s12">
+                        <button class="btn btn-light">Log in</button>
+                        <button class="btn btn-light" (click)="navigateTo('/signup')">Sign
+                            up</button>
+                    </div>
+                </div>
+            </form>
+            <div *ngIf="alert == true" class="alert alert-secondary" role="alert">                
+                {{msg}}
+            </div>
+        </div>
+    </div>
+</div>

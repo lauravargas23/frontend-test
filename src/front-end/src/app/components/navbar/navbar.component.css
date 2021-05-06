@@ -1,0 +1,9 @@
+.gradient-background {
+    background: linear-gradient(70deg, #ffffff, #540581, #d40667);
+}
+
+.img-logo {
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}

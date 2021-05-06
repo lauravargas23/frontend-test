@@ -1,0 +1,23 @@
+<nav class="nav-wrapper gradient-background">
+    <div class="container">
+        <a href="/" class="brand-logo">
+            <img class="img-logo" src="../assets/logo.png" alt="teleperformance">
+        </a>
+        <a data-target="menu-responsive" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a routerLink="/list">Tasks list</a></li>
+            <li><a routerLink="/userList">User tasks list</a></li>
+            <li><a routerLink="/users">Users list</a></li>
+            <li><a routerLink="/login" (click)="logout()"><i class="material-icons">exit_to_app</i></a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul id="mobile-demo" class="sidenav">
+    <li><a routerLink="/list">Tasks list</a></li>
+    <li><a routerLink="/userList">User tasks list</a></li>
+    <li><a routerLink="/list">Create task</a></li>
+    <li><a routerLink="/login" (click)="logout()"><i class="material-icons">exit_to_app</i></a></li>
+</ul>

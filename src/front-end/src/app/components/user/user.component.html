@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="container table-container" *ngIf="authorized == true">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">signupDate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of usersList; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.rol | uppercase }}</td>
+                    <td>{{ user.signupDate | date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div *ngIf="authorized == false">
+    <div class="container no-authorized">
+        <img src="../../../assets/Not authorized.jpg" alt="No authorized">
+    </div>
+</div>

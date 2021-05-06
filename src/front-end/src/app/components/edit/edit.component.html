@@ -1,0 +1,13 @@
+<a class="edit-button" (click)="setVisible()"><i class="material-icons">edit</i></a>
+<div *ngIf="visible == true" class="card card-container">
+    <div class="card-body">
+        <p>Description: {{description}} </p>
+        <p>Description: {{description}} </p>
+        <p>Satate: {{state}} </p>
+        <p>Comment: {{comment}} </p>
+        <p>User: {{user}} </p>
+        <div class="input-field col s12">
+            <a><i class="material-icons" (click)="close()">close</i></a>
+        </div>
+    </div>
+</div>
